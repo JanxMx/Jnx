@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<title>Java Web Developer Sr - Jesús Valdez</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="data.js"></script>
+	<script type="text/javascript">
+	
+		$( document ).ready(function() {
+			//$("#jobTitle").text("Cambiando el texto  =)");
+			//$("#jobTitle").text( data_es.jobTitle );
+			//alert("testJs:" + data_es.jobTitle);
+			fillTagsWithEnglish();
+			
+			//var x = Object.keys(data_es); 
+			//alert("keys:" + x);
+			//fillTags(data_es);
+		});
+		
+		function fillTagsWithEnglish() {
+			//$("#jobTitle").text( data_en.jobTitle );
+			//$("#name").text( data_en.name );
+			updateTags(data_en);
+		}
+
+		function fillTagsWithSpanish() {
+			updateTags(data_es);
+		}
+		
+		function updateTags(data) {
+			var keys = Object.keys(data) + ''; 		// es necesario convertir el objeto en texto
+			var keysArray = keys.split(','); 
+			var keysLen = keysArray.length; 
+			
+			for(i=0; i<keysLen; i++) {
+				if(keysArray[i]=="teCollection") {
+					$("#teCollection").empty();
+					var tsLen = data[keysArray[i]].length; 
+					for(z=0; z<tsLen; z++) {
+						$("#teCollection").append("<div class='NodeDiv'>" + data.teCollection[z].name + "</div>");
+					}			
+				}else if(keysArray[i]=="tsCollection") {
+					$("#tsCollection").empty();
+					var tsLen = data[keysArray[i]].length; 
+					for(j=0; j<tsLen; j++) {
+						$("#tsCollection").append("<li>" + data.tsCollection[j].name + "</li>");
+					}
+				}else if(keysArray[i]=="peCollection") {
+					$("#peCollection").empty();
+					$("#peCollection").append(
+						"<tr><th>" + data.peTitleCompany + "</th>" + 
+						"<th>" + data.peTitlePosition + "</th>" + 
+						"<th colspan=2>" + data.peTitleDuration + "</th></tr>"
+					);
+						
+					var tsLen = data[keysArray[i]].length; 
+					for(k=0; k<tsLen; k++) {
+						$("#peCollection").append(
+							"<tr><td>" + data.peCollection[k].company + 
+							"</td><td>" + data.peCollection[k].position + 
+							"</td><td>" + data.peCollection[k].years + 
+							"</td><td>" + data.peCollection[k].date + "</td></tr>"
+						);
+					}										
+					
+				}else if(keysArray[i]=="ccCollection") {
+					$("#ccCollection").empty();
+					$("#ccCollection").append(
+						"<tr><th>" + data.ccTitleName + "</th>" + 
+						"<th>" + data.ccTitleCompany + "</th>" + 
+						"<th>" + data.ccTitlePlace + "</th>" + 
+						"<th>" + data.ccTitleDate + "</th></tr>"
+					);
+						
+					var tsLen = data[keysArray[i]].length; 
+					for(l=0; l<tsLen; l++) {
+						$("#ccCollection").append(
+							"<tr><td>" + data.ccCollection[l].name + 
+							"</td><td>" + data.ccCollection[l].company + 
+							"</td><td>" + data.ccCollection[l].place + 
+							"</td><td>" + data.ccCollection[l].date + "</td></tr>"
+						);
+					}					
+				}else{
+					$("#" + keysArray[i]).text(data[keysArray[i]] ) ;
+				}
+			}
+		}
+		
+		/*
+	    $(function() {
+			//var people = [];
+			//alert("test1");
+
+			$.getJSON('data_es.json', function(data) {
+				/*
+				$.each(data.person, function(i, f) {
+					var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+						"<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+						$(tblRow).appendTo("#userdata tbody");
+				});* /
+				alert("test2");
+				alert("test:" + data.jobTitle);
+			});
+		});*/
+	</script>
+</head>
+<body>
+	<div class="TitleStyle">
+		<a id="jobTitle" style="font-size: 22px; font-weight: bold;">Job Title</a></br>
+		<a id="name" style="font-size: 16px;">name</a>
+	</div>
+	<div class="TitleStyle" style="text-align: right;">
+		<a id="city">City</a></br>
+		<a id="mobile">Mobile</a></br>
+		<a id="email">Email</a></br>
+		<a onClick="fillTagsWithEnglish()" >English</a>
+		<a onClick="fillTagsWithSpanish()" >Spanish</a> 
+		<a>Italian</a>
+		<a>French</a>
+	</div>
+	</br>
+	
+	<div id="secTitProfile" class="SectionTitleStyle">Profile</div>
+	<div class="SectionBodyStyle">
+		<p id="profile">Profile description...
+		</p>
+		<ul>
+			<li id="profileHighlight">Profile highlight...</li>
+			<li id="profileEnglish">English level</li>
+			<li id="profileVisa">Visa description</li>
+		<ul>
+	</div>
+	</br>
+	
+	<div id="secTitTE" class="SectionTitleStyle">Tools Experience</div>
+	<div>
+		<!--/br>
+		<table class="TableStyle">
+			<tr><td>Java (JSP, servlets, jdbc), HTML, XML, Javascript (JQuery, Ajax, others), CSS
+				</td></tr>		
+			<tr><td>Oracle (PL/SQL and Toad)
+				</td></tr>		
+		</table-->
+
+		</br>
+		<!--p>
+		The collection of technologies with which I have worked mainly as programming languages, frameworks, IDEs, DBs, S.O., Servers, and others, it's shown bellow:
+		</p-->
+		<div id="teCollection" class="RootDiv">
+			<!--div class="NodeDiv">Java</div>
+			<div class="NodeDiv">Javascript</div>
+			<div class="NodeDiv">JSON</div>
+			<div class="NodeDiv">CSS</div>
+			<div class="NodeDiv">HTML</div>
+			<div class="NodeDiv">XML</div>
+			<div class="NodeDiv">Scala</div>
+			<div class="NodeDiv">MVC</div>
+			<div class="NodeDiv">Struts</div>
+			<div class="NodeDiv">Spring</div>
+			<div class="NodeDiv">Hibernate</div>
+			<div class="NodeDiv">Swagger</div>
+			<div class="NodeDiv">Eclipse</div>
+			<div class="NodeDiv">STS</div>
+			<div class="NodeDiv">Netbeans</div>
+			<div class="NodeDiv">JDeveloper</div>
+			<div class="NodeDiv">Oracle</div>
+			<div class="NodeDiv">MsSQL Server</div>
+			<div class="NodeDiv">MySQL</div>
+			<div class="NodeDiv">Mongo</div>
+			<div class="NodeDiv">Toad</div>
+			<div class="NodeDiv">PL/SQL</div>
+			<div class="NodeDiv">Maven</div>
+			<div class="NodeDiv">Gradle</div>
+			<div class="NodeDiv">JBoos</div>
+			<div class="NodeDiv">Apache Tomcat</div>
+			<div class="NodeDiv">Glashfish</div>
+			<div class="NodeDiv">SVN</div>
+			<div class="NodeDiv">Linux</div>
+			<div class="NodeDiv">Patterns</div>
+			<div class="NodeDiv">SpringBoot</div>
+			<div class="NodeDiv">Swagger</div>
+			<div class="NodeDiv">Docker</div>
+			<div class="NodeDiv">GitHub</div>
+			<div class="NodeDiv">UML</div-->
+			
+		</div>		
+	</div>
+	</br>
+	
+	<div id="secTitTS" class="SectionTitleStyle">Technical Skills</div>
+	<div class="SectionBodyStyle">
+		<!--Software Engineering-->
+		<ul id="tsCollection">
+			<!--li>System analyst</li>
+			<li>Web Programmer (Java & Oracle)</li>
+			<li>Analysis and creation of databases (schemas, sp, triggers, others)</li>
+			<li>Data validation, migration and backup (scripts)</li>
+			<li>Installation and configuration of servers (web, mail, ftp, others)</li>
+			<li>Testing</li-->
+		</ul>
+	</div>
+	</br>
+	
+	<div id="secTitPE" class="SectionTitleStyle">Professional Experience</div>
+	<div style="margin:auto; border:1px green solid;">
+		</br>
+		<table id="peCollection" class="TableStyle">
+			<!--tr>
+				<th>Company</th>
+				<th>Position</th>
+				<th colspan="2">Duration</th>
+			</tr>
+			<tr>
+				<td>Elektra - (Banco Azteca	and Advance America)
+				</td>
+				<td>Java Web Developer</td>
+				<td>8 years</td>
+				<td>2010-date</td>
+			</tr>
+			<tr>
+				<td>Embagroup</td>
+				<td>Java Web Developer</td>
+				<td>7 months</td>
+				<td>2009-2010</td>
+			</tr>
+			<tr>
+				<td>Softtek (General Electric-Corporate)</td>
+				<td>DBA & Java  Web Developer</td>
+				<td>2 years</td>
+				<td>2007-2009</td>
+			</tr>
+			<tr>
+				<td>Electoral Federal Institute</td>
+				<td>DBA & Developer</td>
+				<td>6 months</td>
+				<td>2006</td>
+			</tr>
+			<tr>
+				<td>ITESM Campus Aguascalientes</td>
+				<td>IT Support & Developer</td>
+				<td>5 years</td>
+				<td>2001-2006</td>
+			</tr>
+			<!-- ESTO ESTA DESHABILITADO
+				tr>
+				<td>Cecytea</td>
+				<td>IT support</td>
+				<td>4 years</td>
+				<td>1997-2001</td>
+			</tr>
+			<tr>
+				<td>Conalep</td>
+				<td>IT support</td>
+				<td>2 years</td>
+				<td>1995-1997</td>
+			</tr-->
+		</table>
+		
+		</br>
+		<div id="peCollection2" style="width:auto; margin:auto; border:1px red solid;">
+			<div class="RootDiv2">
+				<div class="NodeDiv2" style="width:355px; border:1px #e7e7e7 solid; background: #F7F1D7">Company</div>
+				<div class="NodeDiv2">
+					<div class="NodeDiv2" style="width:200px; border:1px #e7e7e7 solid; background: #F7F1D7">Position</div>
+					<div class="NodeDiv2" style="width:153px; border:1px #e7e7e7 solid; background: #F7F1D7">Duration</div>
+				</div>
+			</div>
+			<div class="RootDiv2">
+				<div class="NodeDiv2" style="width:355px; border:1px #e7e7e7 solid; background: #F7F7F7">Elektra - (Banco Azteca	and Advance America)</div>
+				<div class="NodeDiv2">
+					<div class="NodeDiv2" style="width:200px; border:1px #e7e7e7 solid">Java Web Developer</div>
+					<div class="NodeDiv2" style="width:76px; border:1px #e7e7e7 solid">8 years</div>
+					<div class="NodeDiv2" style="width:75px; border:1px #e7e7e7 solid">2010-date</div>
+				</div>
+			</div>			
+		</div>	
+
+		</br>
+		<div id="peCollection3" style="width:auto; margin:auto; border:1px red solid;">
+			<div id="peCollection4" style="width:50%; margin:auto; border:1px green solid;">
+				mmmmmmmmmmmmm
+			</div>
+		</div>
+		<div id="peCollection5" style="width:auto; border:1px red solid;">
+			<div class="RootDiv2" style="width:95%;">
+				<div class="NodeDiv2" style="width:50%; border:1px #e7e7e7 solid; background: #F7F1D7">Company</div>
+				<div class="NodeDiv2" style="width:49%; height:auto; float:left;">
+					<div class="NodeDiv2" style="width:53%; border:1px #e7e7e7 solid; background: #F7F1D7">Position</div>
+					<div class="NodeDiv2" style="width:45%; float:left; border:1px #e7e7e7 solid; background: #F7F1D7">Duration</div>
+				</div>
+			</div>
+			<div class="RootDiv2">
+				<div class="NodeDiv2" style="width:355px; border:1px #e7e7e7 solid; background: #F7F7F7">Elektra - (Banco Azteca	and Advance America)</div>
+				<div class="NodeDiv2">
+					<div class="NodeDiv2" style="width:200px; border:1px #e7e7e7 solid">Java Web Developer</div>
+					<div class="NodeDiv2" style="width:76px; border:1px #e7e7e7 solid">8 years</div>
+					<div class="NodeDiv2" style="width:75px; border:1px #e7e7e7 solid">2010-date</div>
+				</div>
+			</div>			
+		</div>			
+	</div>
+	</br>
+	
+	<div id="secTitCC" class="SectionTitleStyle">Certification / Courses</div>
+	<div>
+		</br>
+		<table id="ccCollection" class="TableStyle">
+			<!-- certification and courses -->
+		</table>
+	</div>
+	</br></br>
+</body>
+<footer>Created by Jes&uacute;s Valdez</footer>
+</html>
