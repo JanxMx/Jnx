@@ -43,7 +43,7 @@ function updateTags(data) {
 			$("#teCollection").empty();
 			var tsLen = data[keysArray[i]].length; 
 			for(z=0; z<tsLen; z++) {
-				$("#teCollection").append("<div class='NodeDiv'>" + data.teCollection[z].name + "</div>");
+				$("#teCollection").append("<div class='NodeDiv'>" + data.teCollection[z] + "</div>");
 			}			
 		}else if(keysArray[i]=="tsCollection") {
 			$("#tsCollection").empty();
