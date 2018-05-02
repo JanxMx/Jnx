@@ -8,6 +8,10 @@ body {
 footer {
 	text-align: center;	
 }
+
+.main {
+	padding: 15px 10px 15px 15px;					/* top rigth bottom left  */
+}
 	
 .TitleStyle {
 	text-align: center;	
