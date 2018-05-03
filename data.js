@@ -62,34 +62,7 @@ var data_en = {
 				"Data validation, migration and backup (scripts)",
 				"Installation and configuration of servers (web, mail, ftp, others)",
 				"Testing"],				
-				
-	"peTitleCompany": "Company",
-	"peTitlePosition": "Position",
-	"peTitleDuration": "Duration",	
-	"peTitleDetail": "",		/* "Det" */
 
-	"peCollection": [	
-				{"company": "Elektra - (Banco Azteca and Advance America) ",
-				 "position": "Java Web Developer",
-				 "years": "8 years",
-				 "date": "2010 to date"}, 
-				{"company": "Embagroup",
-				 "position": "Java Web Developer",
-				 "years": "7 months",
-				 "date": "2009-2010"},
-				{"company": "Softtek (General Electric-Corporate)",
-				 "position": "Java Web Developer & DBA",
-				 "years": "2 years",
-				 "date": "2007-2009"},
-				{"company": "Electoral Federal Institute",
-				 "position": "Delphi Developer & DBA",
-				 "years": "6 months",
-				 "date": "2006"},
-				{"company": "ITESM Campus Aguascalientes",
-				 "position": "IT Support & Developer",
-				 "years": "5 years",
-				 "date": "2001-2006"}],
-	
 	"ccTitleName": "Course Name",
 	"ccTitleCompany": "Company",
 	"ccTitlePlace": "Place",
@@ -141,65 +114,13 @@ var data_en = {
 				"Analysis, development and maintenance of Java Web systems", 
 				"Certified in Niagara AX Framework by TRIDIUM. Richmond, VA.", 
 				"Participate in meetings with American users"],
-				 
-	"peTempCollection": [
-				{"company": "Elektra",
-				 "project": "Model Configurator",
-				 "businessUnit": "Software Factory Advance America",
-				 "description": "It is a system of administration and configuration of parameters.",
-				 "objective": "The objective of the MC was to manage the parameters used by the NextGen system. The parameters have dependencies between them based on legal rules and commercial rules, which involved the creation of a complex algorithm to validate the rules.",
-				 "responsibilities": [
-					"administration and planning of project activities.",
-					"interaction with American users to follow up on requirements and defects.",
-					"analysis, development, maintenance and testing of the different modules including the database part (back-end).",
-					"analysis, development, maintenance and testing of Restful services.",
-					"configuration of local servers for testing."],
-				 "usedTools":[
-					"Eclipse", "Java", "Strut", "Spring", "Maven", "HTML", "JSP", "Javascript", "JQuery", "CSS", "SQL", "Oracle", "Toad", "JBoss", "Jetty", "JUnit", "TDD", "Scrum"]
-				}, 
-				
-				{"company": "Banco Azteca",
-				 "project": "Various",
-				 "user": "LAM Systems (Latin American)",
-				 "description": "Support to different systems.",
-				 "objective": "This area was a type of internal systems consultancy for Banco Azteca - LAM, it consisted of providing support to Latin American systems.",
-				 "responsibilities": [
-					"analysis, development, maintenance and testing of the different modules (back-end).",
-					"communication with users." ],
-				 "usedTools":[
-					 "Eclipse", "Netbeans", "JDeveloper", "Java", "Strut", "Spring", "Hibernate", "Maven", "HTML", "JSP", "Javascript", "JQuery", "ExtJs", "DWR", "CSS", "SQL", "Oracle", "Toad", "JBoss",	 "Glassfish", "JUnit"]
-				}, 
-				 
-				{"company": "Softtek",
-				 "project": "Mars - DXL",
-				 "user": "GE - Corporate",
-				 "description": "It was a validating system of accounting document formats.",
-				 "objective": "The objective of the system was to validate that the format of the accounting documents was valid, once validated the document was sent to the system in charge of processing it.",
-				 "responsibilities": [
-					"analysis, development, maintenance and testing of the different modules (back-end).",
-					"the response performance of some database queries was improved." ],
-				 "usedTools":[
-					"Eclipse", "Java", "HTML", "JSP", "Javascript", "JQuery", "CSS", "SQL", "Oracle", "Toad", "JBoss"]
-				},
-					
-				{"company": "Softtek",
-				 "project": "RealEstate",
-				 "user": "GE - Corporate",
-				 "description": "Migration of BD with information from GE-Realstate.",
-				 "objective": "The objective of the project was to validate and migrate information from an obsolete DB to an Oracle database. One of the main challenges was maintaining integrity in the catalogs which were updated two or three times a week. The other great challenge was to deliver the project within a period of 4 months because it had a delay of 2 years.",
-				 "responsibilities": [
-					"responsible for the project.",
-					"daily communication with the project user (in English).",
-					"reverse engineering.",
-					"generation of scripts for validation and migration (SQL Loader).",
-					"flow analysis and redesign for time reduction.",
-					"tests."],
-				 "usedTools":[
-					"SQL", "Oracle", "Toad"]
-				}		
-	],
 	
-	"peCollection2": [	
+	"peTitleCompany": "Company",
+	"peTitlePosition": "Position",
+	"peTitleDuration": "Duration",	
+	"peTitleDetail": "",		/* "Det" */
+	
+	"peCollection": [	
 	
 				{"id": "1",
 				 "company": "Elektra (Banco Azteca and Advance America) ",
@@ -339,7 +260,6 @@ var data_en = {
 							"Delphi", "MsSQL Server"]
 						}
 					]}
-					
 			]
 }
 /* "Science and Technology Studies Center of the State of Aguascalientes" */
