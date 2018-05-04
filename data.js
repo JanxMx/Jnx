@@ -44,7 +44,20 @@ var data_en = {
 	"secTitPE": "Professional Experience",
 	"secTitCC": "Certification / Courses",
 	"secTitAch": "Achievements",
-				/*"Work Experience"*/
+				/*"Work Experience"*/ 
+	
+	/*
+	"sectionTitles": {"profile" : "Professional Profile",
+				"tools": "Tools Experience",
+				"highLights": "Skill Highlights",
+				/*"Technical Skills",
+				  "Skill Highlights"* /
+				"professionalExperience": "Professional Experience",
+				"certCourses": "Certification / Courses",
+				"achievements": "Achievements",
+				/*"Work Experience"* /
+	},	
+	*/
 	
 	"profile": "Bachelor of Science in Computer Science, graduated from the Technological Institute of Aguascalientes. Professional license 5490944.",
 	"profileHighlight": "Java Web Developer with 10 years of experience in full-stack",
@@ -53,7 +66,7 @@ var data_en = {
 	"profileOther": "Good team player, responsible, creative and proactive among other capabilities such as dedicated, patient and innovator.",
 				
 	"teCollection": [	
-				"Java", "Javascript", "JSON", "CSS", "HTML", "XML", "MVC", "Struts", "Spring", "Hibernate", "Swagger", "Eclipse", "STS", "Netbeans", "JDeveloper", "Oracle", "MsSQL Server", "MySQL", "Mongo", "Toad", "PL/SQL", "Maven", "Gradle", "JBoos", "Apache Tomcat", "Glashfish", "SVN", "Linux", "Patterns", "SpringBoot", "Swagger", "Docker", "GitHub", "UML"],
+				"Java", "Javascript", "JSON", "CSS", "HTML", "XML", "MVC", "Struts", "Spring", "Hibernate", "Swagger", "Eclipse", "STS", "Netbeans", "JDeveloper", "SQL", "Oracle", "MySQL", "Mongo", "Toad", "PL/SQL", "Maven", "Gradle", "JBoos", "Tomcat", "Glashfish", "SVN", "Linux", "Patterns", "SpringBoot", "Swagger", "Docker", "UML"],
 				
 	"tsCollection": [	
 				"System analyst",
@@ -62,11 +75,16 @@ var data_en = {
 				"Data validation, migration and backup (scripts)",
 				"Installation and configuration of servers (web, mail, ftp, others)",
 				"Testing"],				
-
+	/*
 	"ccTitleName": "Course Name",
 	"ccTitleCompany": "Company",
 	"ccTitlePlace": "Place",
 	"ccTitleDate": "Date",
+	*/
+	"ccTitles": {"name": "Course Name",
+				"company": "Company",
+				"place": "Place",
+				"date": "Date"},		
 	
 	"ccCollection": [	
 				{"name": "English",
@@ -107,22 +125,44 @@ var data_en = {
 				 "date": "2009"},
 				{"name": "Sun Certified Java Programmer 5",
 				 "company": "Desarrolla",
-				 "place": "Aguascalientes, Mex.",
+				 "place": "Ags, Mex.",
 				 "date": "2009"}],
 				 
 	"achCollection": [	
 				"Analysis, development and maintenance of Java Web systems", 
 				"Certified in Niagara AX Framework by TRIDIUM. Richmond, VA.", 
 				"Participate in meetings with American users"],
-	
+	/*
 	"peTitleCompany": "Company",
 	"peTitlePosition": "Position",
 	"peTitleDuration": "Duration",	
-	"peTitleDetail": "",		/* "Det" */
+	"peTitleDetail": "",		/* "Det" * /
+	"peTitlePos": { "company": "Company", 
+					"position": "Position",
+					"project": "Project",
+					"businessUnit": "Client",
+					"description": "Description", 
+					"objective": "Objective", 
+					"responsibilities": "Responsibilities",
+					"tools": "Tools"},
+	*/
+
+	"peTitles": {"company": "Company",
+				"position": "Position",
+				"duration": "Duration",
+				"details": "",			/* "Det" */
+				"positions": {	"company": "Company", 
+								"position": "Position",
+								"project": "Project",
+								"businessUnit": "Client",
+								"description": "Description", 
+								"objective": "Objective", 
+								"responsibilities": "Responsibilities",
+								"tools": "Tools"}},					
 	
 	"peCollection": [	
 	
-				{"id": "1",
+				{"id": "5",
 				 "company": "Elektra (Banco Azteca and Advance America) ",
 				 "position": "Java Web Developer",
 				 "years": "8 years",
@@ -161,7 +201,7 @@ var data_en = {
 						
 					]
 				 }, 
-				{"id": "2",
+				{"id": "4",
 				 "company": "Embagroup",
 				 "position": "Java Web Developer",
 				 "years": "7 months",
@@ -220,7 +260,7 @@ var data_en = {
 							"SQL", "Oracle", "Toad"]
 						}
 					]},
-				{"id": "4",
+				{"id": "2",
 				 "company": "Electoral Federal Institute",
 				 "position": "Delphi Developer & DBA",
 				 "years": "6 months",
@@ -236,10 +276,10 @@ var data_en = {
 						"responsibilities": [
 							"analysis, development, maintenance and testing of the system."],
 						"usedTools":[
-							"Delphi", "MsSQL Server"]
+							"Delphi", "MsSQL"]
 						}
 					]},
-				{"id": "5",
+				{"id": "1",
 				 "company": "Cecytea",
 				 "position": "IT Support & Developer",
 				 "years": "5 years",
@@ -257,7 +297,7 @@ var data_en = {
 							"preventive and corrective maintenance of computer equipment",
 							"installation and configuration of networks."],
 						"usedTools":[
-							"Delphi", "MsSQL Server"]
+							"Delphi", "MsSQL"]
 						}
 					]}
 			]
