@@ -76,7 +76,7 @@ tr:nth-child(odd) {
 
 .NodeDiv {
 	height: 16px;
-	width: 100px;
+	width: 80px;
 	-moz-border-radius: 10px;
 	border-radius: 8px;	
 	border: 1px #e7e7e7 solid;
