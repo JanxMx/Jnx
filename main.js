@@ -75,10 +75,10 @@ function updateTags(data) {
 			$("#peCollection").empty();
 			$("#peDiv").empty();
 			$("#peCollection").append(
-				"<tr><th>" + data.peTitleCompany + "</th>" + 
-				"<th>" + data.peTitlePosition + "</th>" + 
-				"<th colspan=2>" + data.peTitleDuration + "</th>" + 
-				"<th>" + data.peTitleDetail + "</th></tr>"
+				"<tr><th>" + data.peTitles.company + "</th>" + 
+				"<th>" + data.peTitles.position + "</th>" + 
+				"<th colspan=2>" + data.peTitles.duration + "</th>" + 
+				"<th>" + data.peTitles.details + "</th></tr>"
 			);
 				
 			var tsLen2 = data[keysArray[i]].length; 
@@ -93,26 +93,27 @@ function updateTags(data) {
 						data.peCollection[k2].id + ")'/></td></tr>"
 				);
 				
+				/* width:80%; */
 				var pePosLen = data.peCollection[k2].positions.length;
 				for(k22=0; k22<pePosLen; k22++) {
 					$("#peDiv").append(
-						"<table jobId='job_" + data.peCollection[k2].id + "' class='TableStyle' style='width:80%; display:none'>" + 
-						"<tr><th width='16%'>Compañia</th>" +
+						"<table jobId='job_" + data.peCollection[k2].id + "' class='TableStyle' style='display:none'>" + 
+						"<tr><th width='16%'>" + data.peTitles.positions.company + "</th>" +
 						"<td>" + data.peCollection[k2].company + "</td>" + 
-						"<tr><th>Position</th>" +
+						"<tr><th>" + data.peTitles.positions.position + "</th>" +
 						"<td>" + data.peCollection[k2].positions[k22].position + "</td>" + 
-						"<tr><th>Project</th>" +
+						"<tr><th>" + data.peTitles.positions.project + "</th>" +
 						"<td>" + data.peCollection[k2].positions[k22].project + "</td>" + 	
-						"<tr><th>Usuario</th>" +
+						"<tr><th>" + data.peTitles.positions.businessUnit + "</th>" +
 						"<td>" + data.peCollection[k2].positions[k22].businessUnit + "</td>" + 
-						"<tr><th>Description</th>" +
+						"<tr><th>" + data.peTitles.positions.description + "</th>" +
 						"<td>" + data.peCollection[k2].positions[k22].description + "</td>" + 
-						"<tr><th>Objetivo</th>" +
+						"<tr><th>" + data.peTitles.positions.objective + "</th>" +
 						"<td>" + data.peCollection[k2].positions[k22].objective + "</td>" + 						
-						"<tr><th>Actividades</th>" +
+						"<tr><th>" + data.peTitles.positions.responsibilities + "</th>" +
 						"<td><ul id='ulResp_" + data.peCollection[k2].id + "_" +
 						data.peCollection[k2].positions[k22].id + "'></ul></td>" + 
-						"<tr><th>Tecnologías utilizadas</th>" + 
+						"<tr><th>" + data.peTitles.positions.tools + "</th>" + 
 						"<td><div id='divTools_" + data.peCollection[k2].id + "_" +
 						data.peCollection[k2].positions[k22].id + "' class='RootDiv'></div></td>" + 						
 						"</tr></table>" + 
@@ -138,10 +139,10 @@ function updateTags(data) {
 		}else if(keysArray[i]=="ccCollection") {
 			$("#ccCollection").empty();
 			$("#ccCollection").append(
-				"<tr><th>" + data.ccTitleName + "</th>" + 
-				"<th>" + data.ccTitleCompany + "</th>" + 
-				"<th>" + data.ccTitlePlace + "</th>" + 
-				"<th>" + data.ccTitleDate + "</th></tr>"
+				"<tr><th>" + data.ccTitles.name + "</th>" + 
+				"<th>" + data.ccTitles.company + "</th>" + 
+				"<th>" + data.ccTitles.place + "</th>" + 
+				"<th>" + data.ccTitles.date + "</th></tr>"
 			);
 						
 			var tsLen = data[keysArray[i]].length; 
