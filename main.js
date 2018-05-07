@@ -1,9 +1,22 @@
 $( document ).ready(function() {
+	//loadLanguageScripts();
 	fillTagsWithEnglish();
 });
-		
+
+/*
+	$(function(){
+		$("#include_html").load("main.html");
+	});
+	
+/*	
+function loadLanguageScripts() {
+	alert("loadLanguageScripts...");
+	$.getScript("data_fr.js", function() {
+		alert("Script data_fr.js loaded but not necessarily executed.");
+	});
+}*/
+
 function fillTagsWithEnglish() {
-	//createFlags(data_lang);
 	updateTags(data_en);
 }
 
@@ -90,7 +103,11 @@ function updateTags(data) {
 					"</td><td>" + data.peCollection[k2].date + 
 					"</td><td><img id='img_" + data.peCollection[k2].id + 
 						"' src='close_up.jpg' alt='more...' onclick='displayJobDetail3(" + 
-						data.peCollection[k2].id + ")'/></td></tr>"
+						data.peCollection[k2].id + ")'" + 
+						/* -- REMOVE FOR PDF -- * /
+						" style='display:none;'" +
+						/* -- - - - -- - - - -- */
+						"/></td></tr>"
 				);
 				
 				/* width:80%; */
