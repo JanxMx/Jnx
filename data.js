@@ -398,7 +398,7 @@ var data_es = {
 				 "date": "2009"},
 				{"name": "Sun Certified Java Programmer 5",
 				 "company": "Desarrolla",
-				 "place": "Aguascalientes, Mex.",
+				 "place": "Ags, Mex.",
 				 "date": "2009"}],
 				 
 	"achCollection": [	
@@ -655,7 +655,7 @@ var data_it = {
 				 "date": "2009"},
 				{"name": "Programmatore Java certificato Sun 5",
 				 "company": "Desarrolla",
-				 "place": "Aguascalientes, Mex.",
+				 "place": "Ags, Mex.",
 				 "date": "2009"}],				
 	
 	"achCollection": [	
@@ -940,7 +940,7 @@ var data_fr = {
 				 "date": "2009"},
 				{"name": "Programmeur Java certifié Sun 5",
 				 "company": "Desarrolla",
-				 "place": "Aguascalientes, Mex.",
+				 "place": "Ags, Mex.",
 				 "date": "2009"}],
 				 
 	"achCollection": [	
